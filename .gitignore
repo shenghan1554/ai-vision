@@ -1,0 +1,21 @@
+.venv/
+build/
+dist/
+release/
+__pycache__/
+*.py[cod]
+settings.json
+_tmp_settings_probe.json
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+test-output/
+smoke-output/
+exe-test-output/
+*.log
+
+# 本机临时
+Thumbs.db
+desktop.ini
+*.tmp

@@ -1,0 +1,16 @@
+{
+  "appearance": "light",
+  "model": "{resource}/models/yolov8n.pt",
+  "source": "",
+  "output": "{app}/output",
+  "conf": 0.25,
+  "iou": 0.45,
+  "imgsz": 640,
+  "device": "auto",
+  "save_json": true,
+  "unique_output": true,
+  "camera": {
+    "serial": ""
+  },
+  "camera_mode": "photo"
+}

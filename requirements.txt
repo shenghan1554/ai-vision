@@ -1,0 +1,14 @@
+# Python 3.10-3.12 (64-bit) recommended
+ultralytics>=8.3.0,<9.0
+# PyTorch is installed by Ultralytics, but listed here to make the PT backend explicit.
+torch>=2.2,<3.0
+onnx>=1.15,<2.0
+ml_dtypes>=0.5.0
+onnxruntime>=1.17,<2.0
+# Explicitly included so frozen/offline Ultralytics imports never auto-install it.
+lap>=0.5.12
+opencv-python>=4.8,<6.0
+numpy>=1.26,<3.0
+Pillow>=10.0,<13.0
+customtkinter>=5.2,<7.0
+darkdetect>=0.8,<1.0

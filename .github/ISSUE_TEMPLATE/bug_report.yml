@@ -1,0 +1,85 @@
+name: Bug 报告
+description: 报告识别错误、相机无法打开、界面或构建问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先搜索[已有 Issue](https://github.com/shenghan1554/ai-vision/issues)，避免重复。
+        **请勿上传产线/客户现场的原始图片**，截图与日志请先脱敏。
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      placeholder: "2.6.0（设置页或 EXE 属性里可看）"
+    validations:
+      required: true
+  - type: dropdown
+    id: runmode
+    attributes:
+      label: 运行方式
+      options:
+        - 便携版（AIVision.exe + _internal）
+        - 安装版（Setup.exe 安装的）
+        - 从源码运行（python app.py）
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 问题类型
+      options:
+        - USB 免驱相机
+        - 海康 MVS 工业相机
+        - 模型加载 / PT / ONNX
+        - 识别结果不准确
+        - 界面与交互
+        - 输出保存 / 权限
+        - 构建与打包
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 系统与硬件
+      description: Windows 版本、CPU、是否独立显卡；海康相机请写型号与固件版本
+      placeholder: "Windows 11 23H2 x64 / i7-12700 / 无独显"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 选择相机 ...
+        3. 点击开始检测 ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果 / 日志
+      description: 右侧运行日志、控制台输出，或 `python detect.py --list-cameras` 的结果
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认
+      options:
+        - label: 我已在最新版本复现
+          required: true
+        - label: 我已搜索过已有 Issue
+          required: true
+        - label: 我没有上传含敏感信息的图片
+          required: true
